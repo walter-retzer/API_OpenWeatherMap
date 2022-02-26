@@ -3,5 +3,5 @@ Informações meteorológicas da API CurrentWeatherData para mostrar um exemplo 
 
 ## TELA DO APLICATIVO
 
-![Gráfico](screen/Screenshot_tela_inicial.png)
+![Gráfico](screen/Screenshot_tela.png)
 
