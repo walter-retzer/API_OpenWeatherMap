@@ -4,8 +4,10 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.wdretzer.api_weathermap.model.Sys
 import com.wdretzer.api_weathermap.model.TemperatureData
 import com.wdretzer.api_weathermap.model.Weather
+import com.wdretzer.api_weathermap.model.Wind
 import com.wdretzer.api_weathermap.repository.ApiRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.catch
@@ -30,6 +32,14 @@ class ApiViewModel(private val repository: ApiRepository = ApiRepository.instanc
     val tempData: LiveData<TemperatureData>
         get() = _tempData
 
+    private val _windData = MutableLiveData<Wind>()
+    val windData: LiveData<Wind>
+        get() = _windData
+
+    private val _sysData = MutableLiveData<Sys>()
+    val sysData: LiveData<Sys>
+        get() = _sysData
+
 
     fun getData(city: String) = viewModelScope.launch(Dispatchers.Main){
         repository
@@ -39,6 +49,8 @@ class ApiViewModel(private val repository: ApiRepository = ApiRepository.instanc
                 _city.postValue(it.name)
                 _weather.postValue(it.weather.first())
                 _tempData.postValue(it.main)
+                _windData.postValue(it.wind)
+                _sysData.postValue(it.sys)
             }
     }
 }

@@ -2,9 +2,9 @@
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
     android:background="@drawable/gradient_bg"
     android:orientation="vertical"
     android:padding="25dp"
@@ -36,11 +36,31 @@
                 android:id="@+id/updated_at"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="25 Fecereiro 2022, 17:08 PM"
+                android:text="Date"
                 android:textColor="@color/white"
                 android:textSize="14dp" />
         </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/addressContainer2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_margin="80dp"
+            android:orientation="vertical">
 
+            <ImageView
+                android:id="@+id/imagem"
+                android:src="@drawable/broken_clouds"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:text="CITY"
+                android:scaleType="fitCenter"
+                android:textColor="@color/white"
+                android:textSize="24dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
 
         <LinearLayout
             android:id="@+id/overviewContainer"
@@ -54,7 +74,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Clear Sky"
+                android:text="Description"
                 android:textColor="@color/white"
                 android:textSize="18dp"
                 android:textStyle="bold" />
@@ -65,7 +85,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:fontFamily="sans-serif-thin"
-                android:text="29°C"
+                android:text="°C"
                 android:textColor="@color/white"
                 android:textSize="86dp"
                 android:textStyle="bold" />
@@ -80,7 +100,7 @@
                     android:id="@+id/temp_min"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Min Temp: "
+                    android:text="Min Temp: °C"
                     android:textColor="@color/white" />
 
                 <androidx.legacy.widget.Space
@@ -91,7 +111,7 @@
                     android:id="@+id/temp_max"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Max Temp: 05:05 PM"
+                    android:text="Max Temp: °C"
                     android:textColor="@color/white" />
             </LinearLayout>
 
@@ -141,7 +161,8 @@
                         android:id="@+id/sunrise"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="06:40 AM"
+                        android:text="__ __ __"
+                        android:textAlignment="center"
                         android:textColor="@color/white"
                         android:textSize="14dp" />
                 </LinearLayout>
@@ -180,7 +201,8 @@
                         android:id="@+id/sunset"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="06:40 AM"
+                        android:text="__ __ __"
+                        android:textAlignment="center"
                         android:textColor="@color/white"
                         android:textSize="14dp" />
                 </LinearLayout>
@@ -219,7 +241,8 @@
                         android:id="@+id/wind"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="06:40 AM"
+                        android:text="meter/sec"
+                        android:textAlignment="center"
                         android:textColor="@color/white"
                         android:textSize="14dp" />
                 </LinearLayout>
@@ -265,7 +288,7 @@
                         android:id="@+id/pressure"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="06:40 AM"
+                        android:text="hPa"
                         android:textColor="@color/white"
                         android:textSize="14dp" />
                 </LinearLayout>
@@ -304,7 +327,7 @@
                         android:id="@+id/humidity"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="06:40 AM"
+                        android:text="%"
                         android:textColor="@color/white"
                         android:textSize="14dp" />
                 </LinearLayout>

@@ -6,7 +6,7 @@ import retrofit2.http.*
 interface Api {
 
     //http://api.openweathermap.org/data/2.5/weather?q=sorocaba,br&units=metric&APPID=valordotokendasuaapi
-    @GET("weather?units=metric&appid=valordotokendasuaapi")
+    @GET("weather?units=metric&appid=alordotokendasuaapi")
     suspend fun getWeatherData(@Query("q") city: String): WeatherData
 
     companion object {
