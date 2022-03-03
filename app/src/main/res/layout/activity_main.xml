@@ -27,7 +27,7 @@
                 android:id="@+id/address"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="CITY"
+                android:text="CIDADE"
                 android:textColor="@color/white"
                 android:textSize="24dp"
                 android:textStyle="bold" />
@@ -36,7 +36,7 @@
                 android:id="@+id/updated_at"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Date"
+                android:text="Última atualização: "
                 android:textColor="@color/white"
                 android:textSize="14dp" />
         </LinearLayout>
@@ -45,14 +45,14 @@
             android:id="@+id/addressContainer2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="70dp"
+            android:layout_margin="50dp"
             android:gravity="center"
             android:orientation="vertical">
 
             <ImageView
                 android:id="@+id/imagem"
                 android:layout_width="wrap_content"
-                android:layout_height="200dp"
+                android:layout_height="210dp"
                 android:scaleType="fitCenter"
                 android:src="@drawable/logo"
                 android:text="CITY"
@@ -74,7 +74,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Description"
+                android:text="Descrição"
                 android:textColor="@color/white"
                 android:textSize="18dp"
                 android:textStyle="bold" />
@@ -129,7 +129,7 @@
                     android:id="@+id/rain"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Precipitation: "
+                    android:text="Precipitação: "
                     android:textColor="@color/white"
                     android:visibility="gone" />
             </LinearLayout>
@@ -172,7 +172,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Sunrise"
+                        android:text="Nascer do Sol"
                         android:textColor="@color/white"
                         android:textSize="12dp" />
 
@@ -212,7 +212,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Sunset"
+                        android:text="Pôr do Sol"
                         android:textColor="@color/white"
                         android:textSize="12dp" />
 
@@ -252,7 +252,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Wind"
+                        android:text="Vento"
                         android:textColor="@color/white"
                         android:textSize="12dp" />
 
@@ -260,7 +260,7 @@
                         android:id="@+id/wind"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="meter/sec"
+                        android:text="metros/seg"
                         android:textAlignment="center"
                         android:textColor="@color/white"
                         android:textSize="14dp" />
@@ -299,7 +299,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Pressure"
+                        android:text="Pressão Atm."
                         android:textColor="@color/white"
                         android:textSize="12dp" />
 
@@ -338,7 +338,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Humidity"
+                        android:text="Humidade"
                         android:textColor="@color/white"
                         android:textSize="12dp" />
 
@@ -377,7 +377,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Created By"
+                        android:text="Criado por"
                         android:textColor="@color/white"
                         android:textSize="12dp" />
 
