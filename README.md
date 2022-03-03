@@ -7,10 +7,10 @@ APP com Informações meteorológicas da API CurrentWeatherData, para mostrar um
 
 ## TELA DO APLICATIVO COM INFORMAÇÕES DO CLIMA EM PORTUGUÊS-BR
 
-![Gráfico](screen/tela_informações_pt-br.png)
+![Gráfico](screen/tela_informações_pt-br.jpg)
 
 ### Exibição caso ocorra falha na requisição da API
 
-![Gráfico](screen/falha_na_requisição.png)
+![Gráfico](screen/falha_na_requisição.jpg)
 
-![Gráfico](screen/falha_na_requisição1.png)
+![Gráfico](screen/falha_na_requisição1.jpg)
