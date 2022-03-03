@@ -11,6 +11,6 @@ APP com Informações meteorológicas da API CurrentWeatherData, para mostrar um
 
 ### Exibição caso ocorra falha na requisição da API
 
-![Gráfico](screen/falha_na_requisição.jpg)
+![Gráfico](screen/falha_na_requisição.jpeg)
 
-![Gráfico](screen/falha_na_requisição1.jpg)
+![Gráfico](screen/falha_na_requisição1.jpeg)
