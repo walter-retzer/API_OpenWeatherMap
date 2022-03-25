@@ -1,14 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/containerMain"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient_bg"
     android:orientation="vertical"
-    android:padding="25dp"
-    tools:context=".MainActivity">>
+    android:padding="20dp"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mainContainerSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cidade"
+            android:textColor="@color/white"
+            android:textSize="38sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintEnd_toStartOf="@+id/imagem_search" />
+
+        <ImageView
+            android:id="@+id/imagem_search"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:backgroundTint="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/icon_search"
+            android:tint="@color/white"
+            android:tintMode="src_in"
+            android:layout_marginStart="10dp"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/address"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="UseAppTint" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <RelativeLayout
         android:id="@+id/mainContainer"
@@ -20,46 +59,37 @@
             android:id="@+id/addressContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
             android:gravity="center"
             android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/address"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="CIDADE"
-                android:textColor="@color/white"
-                android:textSize="24dp"
-                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/updated_at"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Última atualização: "
+                android:padding="5dp"
+                android:text="@string/ltima_atualiza_o"
                 android:textColor="@color/white"
-                android:textSize="14dp" />
+                android:textSize="14sp" />
+
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/addressContainer2"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="50dp"
-            android:gravity="center"
+            android:layout_height="180dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="80dp"
+            android:gravity="top"
             android:orientation="vertical">
 
             <ImageView
                 android:id="@+id/imagem"
                 android:layout_width="wrap_content"
-                android:layout_height="210dp"
+                android:layout_height="180dp"
                 android:scaleType="fitCenter"
                 android:src="@drawable/logo"
-                android:text="CITY"
-                android:textColor="@color/white"
-                android:textSize="24dp"
-                android:textStyle="bold" />
-
+                tools:ignore="ContentDescription" />
         </LinearLayout>
 
         <LinearLayout
@@ -74,9 +104,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Descrição"
+                android:text="@string/descri_o"
                 android:textColor="@color/white"
-                android:textSize="18dp"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -85,9 +115,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:fontFamily="sans-serif-thin"
-                android:text="°C"
+                android:text="@string/c"
                 android:textColor="@color/white"
-                android:textSize="86dp"
+                android:textSize="86sp"
                 android:textStyle="bold" />
 
             <LinearLayout
@@ -100,7 +130,7 @@
                     android:id="@+id/temp_min"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Min Temp: °C"
+                    android:text="@string/min_temp_c"
                     android:textColor="@color/white" />
 
                 <androidx.legacy.widget.Space
@@ -111,7 +141,7 @@
                     android:id="@+id/temp_max"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Max Temp: °C"
+                    android:text="@string/max_temp_c"
                     android:textColor="@color/white" />
             </LinearLayout>
 
@@ -129,13 +159,12 @@
                     android:id="@+id/rain"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Precipitação: "
+                    android:text="@string/precipita_o"
                     android:textColor="@color/white"
                     android:visibility="gone" />
             </LinearLayout>
 
         </LinearLayout>
-
 
         <LinearLayout
             android:id="@+id/detailsContainer"
@@ -163,7 +192,8 @@
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:src="@drawable/sunrise"
-                        app:tint="#FFFFFF" />
+                        app:tint="#FFFFFF"
+                        tools:ignore="ContentDescription" />
 
                     <androidx.legacy.widget.Space
                         android:layout_width="wrap_content"
@@ -172,18 +202,18 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Nascer do Sol"
+                        android:text="@string/nascer_do_sol"
                         android:textColor="@color/white"
-                        android:textSize="12dp" />
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/sunrise"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="__ __ __"
+                        android:text="@string/space"
                         android:textAlignment="center"
                         android:textColor="@color/white"
-                        android:textSize="14dp" />
+                        android:textSize="14sp" />
                 </LinearLayout>
 
                 <androidx.legacy.widget.Space
@@ -203,7 +233,8 @@
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:src="@drawable/sunset"
-                        app:tint="#FFFFFF" />
+                        app:tint="#FFFFFF"
+                        tools:ignore="ContentDescription" />
 
                     <androidx.legacy.widget.Space
                         android:layout_width="wrap_content"
@@ -212,18 +243,18 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Pôr do Sol"
+                        android:text="@string/p_r_do_sol"
                         android:textColor="@color/white"
-                        android:textSize="12dp" />
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/sunset"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="__ __ __"
+                        android:text="@string/space2"
                         android:textAlignment="center"
                         android:textColor="@color/white"
-                        android:textSize="14dp" />
+                        android:textSize="14sp" />
                 </LinearLayout>
 
                 <androidx.legacy.widget.Space
@@ -252,19 +283,20 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Vento"
+                        android:text="@string/vento"
                         android:textColor="@color/white"
-                        android:textSize="12dp" />
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/wind"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="metros/seg"
+                        android:text="@string/metros_seg"
                         android:textAlignment="center"
                         android:textColor="@color/white"
-                        android:textSize="14dp" />
+                        android:textSize="14sp" />
                 </LinearLayout>
+
             </LinearLayout>
 
             <androidx.legacy.widget.Space
@@ -290,7 +322,8 @@
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:src="@drawable/pressure"
-                        app:tint="#FFFFFF" />
+                        app:tint="#FFFFFF"
+                        tools:ignore="ContentDescription" />
 
                     <androidx.legacy.widget.Space
                         android:layout_width="wrap_content"
@@ -299,17 +332,17 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Pressão Atm."
+                        android:text="@string/press_o_atm"
                         android:textColor="@color/white"
-                        android:textSize="12dp" />
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/pressure"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="hPa"
+                        android:text="@string/hpa"
                         android:textColor="@color/white"
-                        android:textSize="14dp" />
+                        android:textSize="14sp" />
                 </LinearLayout>
 
                 <androidx.legacy.widget.Space
@@ -329,7 +362,8 @@
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:src="@drawable/humidity"
-                        app:tint="#FFFFFF" />
+                        app:tint="#FFFFFF"
+                        tools:ignore="ContentDescription" />
 
                     <androidx.legacy.widget.Space
                         android:layout_width="wrap_content"
@@ -338,17 +372,17 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Humidade"
+                        android:text="@string/humidade"
                         android:textColor="@color/white"
-                        android:textSize="12dp" />
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/humidity"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="%"
+                        android:text="@string/porcentagem"
                         android:textColor="@color/white"
-                        android:textSize="14dp" />
+                        android:textSize="14sp" />
                 </LinearLayout>
 
                 <androidx.legacy.widget.Space
@@ -368,7 +402,8 @@
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:src="@drawable/info"
-                        app:tint="#FFFFFF" />
+                        app:tint="#FFFFFF"
+                        tools:ignore="ContentDescription" />
 
                     <androidx.legacy.widget.Space
                         android:layout_width="wrap_content"
@@ -377,20 +412,23 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Criado por"
+                        android:text="@string/criado_por"
                         android:textColor="@color/white"
-                        android:textSize="12dp" />
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/about"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Walter Retzer"
+                        android:text="@string/walter_retzer"
                         android:textColor="@color/white"
-                        android:textSize="13dp" />
+                        android:textSize="13sp" />
                 </LinearLayout>
+
             </LinearLayout>
+
         </LinearLayout>
+
     </RelativeLayout>
 
     <ProgressBar
@@ -405,7 +443,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:text="Something went wrong"
+        android:text="@string/something_went_wrong"
         android:visibility="gone" />
 
 </RelativeLayout>

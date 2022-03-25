@@ -1,5 +1,6 @@
 package com.wdretzer.api_weathermap
 
+import android.content.Intent
 import android.icu.text.SimpleDateFormat
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
@@ -11,6 +12,7 @@ import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.annotation.RequiresApi
 import androidx.core.view.isVisible
+import com.wdretzer.api_weathermap.pesquisa.SearchActivity
 import com.wdretzer.api_weathermap.viewmodel.ApiViewModel
 import java.lang.Exception
 import java.util.*
@@ -33,6 +35,7 @@ class MainActivity : AppCompatActivity() {
     private val current_date: TextView by lazy { findViewById(R.id.updated_at) }
     private val progress_bar: ProgressBar by lazy { findViewById(R.id.loader) }
     private val imagem: ImageView by lazy { findViewById(R.id.imagem) }
+    private val imagemSearch: ImageView by lazy { findViewById(R.id.imagem_search) }
 
 
     @RequiresApi(Build.VERSION_CODES.N)
@@ -42,17 +45,36 @@ class MainActivity : AppCompatActivity() {
 
         getSupportActionBar()?.hide()
 
-        current_dateTime()
-        chamadas()
+        val bundle: Bundle? = intent.extras
+
+        if (bundle != null) {
+            val setSearchText = bundle.getString("Search")
+            chamadas(setSearchText.toString())
+        }
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             rendirizacoes()
         }
+
+        imagemSearch.setOnClickListener{
+            sendToSearch("")
+        }
+
+    }
+
+    private fun sendToSearch(search: String) {
+        val intent = Intent(this, SearchActivity::class.java).apply {
+            putExtra("Search", search)
+
+        }
+        startActivity(intent)
     }
 
 
     @RequiresApi(Build.VERSION_CODES.N)
     private fun rendirizacoes() {
         observarApi()
+        current_dateTime()
     }
 
 
@@ -202,14 +224,14 @@ class MainActivity : AppCompatActivity() {
     }
 
     // Função para buscar as informações de uma determinada cidade:
-    private fun chamadas() {
-        viewModelApi.getData("rio de janeiro")
+    private fun chamadas(str: String) {
+        viewModelApi.getData(str)
     }
 
 
     @RequiresApi(Build.VERSION_CODES.N)
     private fun current_dateTime(): String? {
-        val sdf = SimpleDateFormat("dd/M/yyyy hh:mm:ss")
+        val sdf = SimpleDateFormat("dd/MM/yyyy HH:mm:ss")
         val currentDate = sdf.format(Date())
         return currentDate.also { current_date.text = "Última atualização: ${it}" }
     }

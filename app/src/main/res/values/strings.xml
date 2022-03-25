@@ -1,3 +1,23 @@
 <resources>
     <string name="app_name">API_WeatherMap</string>
+    <string name="cidade">CIDADE</string>
+    <string name="ltima_atualiza_o">Última atualização:</string>
+    <string name="descri_o">Descrição</string>
+    <string name="c">°C</string>
+    <string name="min_temp_c">Min Temp: °C</string>
+    <string name="max_temp_c">Max Temp: °C</string>
+    <string name="precipita_o">Precipitação:</string>
+    <string name="nascer_do_sol">Nascer do Sol</string>
+    <string name="space">__ __ __</string>
+    <string name="p_r_do_sol">Pôr do Sol</string>
+    <string name="space2">__ __ __</string>
+    <string name="vento">Vento</string>
+    <string name="metros_seg">metros/seg</string>
+    <string name="press_o_atm">Pressão Atm.</string>
+    <string name="hpa">hPa</string>
+    <string name="humidade">Humidade</string>
+    <string name="porcentagem">%</string>
+    <string name="criado_por">Criado por</string>
+    <string name="walter_retzer">Walter Retzer</string>
+    <string name="something_went_wrong">Something went wrong</string>
 </resources>
