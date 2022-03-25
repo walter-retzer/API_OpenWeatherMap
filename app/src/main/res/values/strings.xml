@@ -20,4 +20,7 @@
     <string name="criado_por">Criado por</string>
     <string name="walter_retzer">Walter Retzer</string>
     <string name="something_went_wrong">Something went wrong</string>
+    <string name="pesquise_o_clima_de_uma_cidade">PESQUISE O CLIMA DE UMA CIDADE</string>
+    <string name="insira_uma_cidade">Insira uma cidade...</string>
+    <string name="procurar">Procurar</string>
 </resources>

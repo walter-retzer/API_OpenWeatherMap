@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_bg"
+    tools:context=".splashscreen.SplashScreenActivity">
+
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Previsão do Tempo"
+        android:textColor="@color/white"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/animmation1"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="#3CF1EBF1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/animmation2"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottie_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:scaleType="fitXY"
+            android:backgroundTint="@android:color/transparent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="rainy-icon.json"
+            app:lottie_loop="true"
+            app:lottie_speed="1" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/animmation2"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="#3CF1EBF1"
+        app:layout_constraintStart_toEndOf="@id/animmation1"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottie_main2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:scaleType="fitXY"
+            android:background="#3CF1EBF1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="weather-partly-cloudy.json"
+            app:lottie_loop="true"
+            app:lottie_speed="1" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/animmation3"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="#3CF1EBF1"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@id/animmation1"
+        app:layout_constraintTop_toBottomOf="@+id/animmation1">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottie_main3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:scaleType="fitXY"
+            android:background="#3CF1EBF1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="light-mode.json"
+            app:lottie_loop="true"
+            app:lottie_speed="1" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/animmation4"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="#3CF1EBF1"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@id/animmation2"
+        app:layout_constraintTop_toBottomOf="@+id/animmation2">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottie_main4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:scaleType="fitXY"
+            android:background="#3CF1EBF1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="windy-icon.json"
+            app:lottie_loop="true"
+            app:lottie_speed="1" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/animmation5"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="#3CF1EBF1"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@id/animmation3"
+        app:layout_constraintTop_toBottomOf="@+id/animmation3">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottie_main5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:scaleType="fitXY"
+            android:background="#3CF1EBF1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="snow-icon.json"
+            app:lottie_loop="true"
+            app:lottie_speed="1" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/animmation6"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="#3CF1EBF1"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@id/animmation4"
+        app:layout_constraintTop_toBottomOf="@+id/animmation4">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottie_main6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:scaleType="fitXY"
+            android:background="#3CF1EBF1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="thunderstorm.json"
+            app:lottie_loop="true"
+            app:lottie_speed="1" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/animmation7"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="#3CF1EBF1"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@id/animmation5"
+        app:layout_constraintTop_toBottomOf="@+id/animmation5">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottie_main7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:scaleType="fitXY"
+            android:background="#3CF1EBF1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="snowflake.json"
+            app:lottie_loop="true"
+            app:lottie_speed="3" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/animmation8"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="#3CF1EBF1"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@id/animmation6"
+        app:layout_constraintTop_toBottomOf="@+id/animmation6">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottie_main8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:scaleType="fitXY"
+            android:background="#3CF1EBF1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="sunny-weather.json"
+            app:lottie_loop="true"
+            app:lottie_speed="1" />
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
