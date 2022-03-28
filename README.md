@@ -1,16 +1,29 @@
 # API_OpenWeatherMap
-APP com Informações meteorológicas da API CurrentWeatherData, para mostrar um exemplo utilizando a biblioteca Retrofit, conceitos de MVVM e Kotlin.
+Aplicativo consumindo Informações meteorológicas da API CurrentWeatherData, utilizando a biblioteca Retrofit, conceitos de MVVM e Kotlin.
+Tela de Abertura com animações utilizando a biblioteca Lottie.
 
 ## GRAVAÇÃO DA TELA DO APLICATIVO
 
-![Gráfico](screen/gravação_tela.gif)
+![Gravação](screen/gravação_tela.gif)
+
+## TELA DE ABERTURA DO APLICATIVO
+
+![Screen](screen/splash_screen.png)
+
+## TELA DE PESQUISA
+
+![Screen](screen/tela_pesquisa.png)
 
 ## TELA DO APLICATIVO COM INFORMAÇÕES DO CLIMA EM PORTUGUÊS-BR
 
-![Gráfico](screen/tela_informações_pt-br.jpg)
+![Screen](screen/são_paulo.png)
 
-### Exibição caso ocorra falha na requisição da API
+![Screen](screen/rio_de_janeiro.png)
 
-![Gráfico](screen/falha_na_requisição.jpeg)
+![Screen](screen/manaus.png)
 
-![Gráfico](screen/falha_na_requisição1.jpeg)
+![Screen](screen/londres.png)
+
+## Exibição caso ocorra falha na requisição da API
+
+![Screen](screen/falha.png)

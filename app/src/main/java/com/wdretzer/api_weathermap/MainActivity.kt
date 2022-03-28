@@ -74,7 +74,6 @@ class MainActivity : AppCompatActivity() {
     @RequiresApi(Build.VERSION_CODES.N)
     private fun rendirizacoes() {
         observarApi()
-        current_dateTime()
     }
 
 
@@ -87,8 +86,8 @@ class MainActivity : AppCompatActivity() {
 
         viewModelApi.error.observe(this) {
             if (it) {
-                weather_city.text = "Dados não encontrados!"
-                Toast.makeText(this, "Falha na Requisição!!", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Dados não encontrados!!", Toast.LENGTH_LONG).show()
+                progress_bar.isVisible = false
             }
         }
 
@@ -96,6 +95,7 @@ class MainActivity : AppCompatActivity() {
             weather_city.text = "$it"
             weather_description.text = "$it"
             progress_bar.isVisible = false
+            current_dateTime()
         }
 
         viewModelApi.weather.observe(this) {
