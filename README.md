@@ -4,7 +4,7 @@ Tela de Abertura com animações utilizando a biblioteca Lottie.
 
 ## GRAVAÇÃO DA TELA DO APLICATIVO
 
-![Gravação](screen/gravação_tela.mp4)
+![Gravação](screen/gravação_tela.gif)
 
 ## TELA DE ABERTURA DO APLICATIVO
 
