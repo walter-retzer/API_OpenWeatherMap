@@ -12,17 +12,23 @@ Tela de Abertura com animações utilizando a biblioteca Lottie.
 
 ## TELA DE PESQUISA
 
-![Screen](screen/tela_pesquisa.png)
+![Screen](screen/tela_pesquisa.jpg)
+
+![Screen](screen/tela_pesquisa01.jpg)
 
 ## TELA DO APLICATIVO COM INFORMAÇÕES DO CLIMA EM PORTUGUÊS-BR
 
-![Screen](screen/são_paulo.png)
+![Screen](screen/são_paulo.jpg)
 
-![Screen](screen/rio_de_janeiro.png)
+![Screen](screen/new_york.jpg)
 
-![Screen](screen/manaus.png)
+![Screen](screen/Sidney.jpg)
 
-![Screen](screen/londres.png)
+![Screen](screen/Londres.jpg)
+
+![Screen](screen/Manaus.jpg)
+
+![Screen](screen/Washington.jpg)
 
 ## Exibição caso ocorra falha na requisição da API
 
